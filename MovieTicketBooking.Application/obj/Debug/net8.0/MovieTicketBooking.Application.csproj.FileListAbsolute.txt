@@ -1,0 +1,15 @@
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\bin\Debug\net8.0\MovieTicketBooking.Application.deps.json
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\bin\Debug\net8.0\MovieTicketBooking.Application.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\bin\Debug\net8.0\MovieTicketBooking.Application.pdb
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\obj\Debug\net8.0\MovieTicketBooking.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\obj\Debug\net8.0\MovieTicketBooking.Application.AssemblyInfoInputs.cache
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\obj\Debug\net8.0\MovieTicketBooking.Application.AssemblyInfo.cs
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\obj\Debug\net8.0\MovieTicketBooking.Application.csproj.CoreCompileInputs.cache
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\obj\Debug\net8.0\MovieTicketBooking.Application.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\obj\Debug\net8.0\refint\MovieTicketBooking.Application.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\obj\Debug\net8.0\MovieTicketBooking.Application.pdb
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\obj\Debug\net8.0\ref\MovieTicketBooking.Application.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\obj\Debug\net8.0\MovieTicketBooking.Application.csproj.AssemblyReference.cache
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\bin\Debug\net8.0\MovieTicketBooking.Domain.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\bin\Debug\net8.0\MovieTicketBooking.Domain.pdb
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\obj\Debug\net8.0\MovieTic.16A12567.Up2Date

@@ -1,0 +1,17 @@
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\bin\Debug\net8.0\MovieTicketBooking.Infrastructure.deps.json
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\bin\Debug\net8.0\MovieTicketBooking.Infrastructure.runtimeconfig.json
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\bin\Debug\net8.0\MovieTicketBooking.Infrastructure.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\bin\Debug\net8.0\MovieTicketBooking.Infrastructure.pdb
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\bin\Debug\net8.0\MovieTicketBooking.Domain.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\bin\Debug\net8.0\MovieTicketBooking.Domain.pdb
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\MovieTicketBooking.Infrastructure.csproj.AssemblyReference.cache
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\MovieTicketBooking.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\MovieTicketBooking.Infrastructure.AssemblyInfoInputs.cache
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\MovieTicketBooking.Infrastructure.AssemblyInfo.cs
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\MovieTicketBooking.Infrastructure.csproj.CoreCompileInputs.cache
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\MovieTic.CB971579.Up2Date
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\MovieTicketBooking.Infrastructure.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\refint\MovieTicketBooking.Infrastructure.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\MovieTicketBooking.Infrastructure.pdb
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\MovieTicketBooking.Infrastructure.genruntimeconfig.cache
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\ref\MovieTicketBooking.Infrastructure.dll
