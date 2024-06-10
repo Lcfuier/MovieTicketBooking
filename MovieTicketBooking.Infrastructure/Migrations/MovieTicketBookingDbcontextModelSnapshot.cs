@@ -353,6 +353,28 @@ namespace MovieTicketBooking.Infrastructure.Migrations
                     b.ToTable("Movie");
                 });
 
+            modelBuilder.Entity("MovieTicketBooking.Domain.Models.Seat", b =>
+                {
+                    b.Property<Guid>("SeatId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsBooking")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("SeatNumber")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("ShowTimeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("SeatId");
+
+                    b.HasIndex("ShowTimeId");
+
+                    b.ToTable("Seat");
+                });
+
             modelBuilder.Entity("MovieTicketBooking.Domain.Models.ShowTime", b =>
                 {
                     b.Property<Guid>("ShowTimeId")
@@ -365,14 +387,8 @@ namespace MovieTicketBooking.Infrastructure.Migrations
                     b.Property<TimeOnly>("EndTime")
                         .HasColumnType("time");
 
-                    b.Property<bool>("IsBooking")
-                        .HasColumnType("bit");
-
-                    b.Property<Guid>("MovieId")
+                    b.Property<Guid?>("MovieId")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Seats")
-                        .HasColumnType("int");
 
                     b.Property<TimeOnly>("StartTime")
                         .HasColumnType("time");
@@ -487,13 +503,22 @@ namespace MovieTicketBooking.Infrastructure.Migrations
                         .HasForeignKey("BookingId");
                 });
 
+            modelBuilder.Entity("MovieTicketBooking.Domain.Models.Seat", b =>
+                {
+                    b.HasOne("MovieTicketBooking.Domain.Models.ShowTime", "ShowTime")
+                        .WithMany("Seats")
+                        .HasForeignKey("ShowTimeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ShowTime");
+                });
+
             modelBuilder.Entity("MovieTicketBooking.Domain.Models.ShowTime", b =>
                 {
                     b.HasOne("MovieTicketBooking.Domain.Models.Movie", "Movie")
                         .WithMany("ShowTimes")
-                        .HasForeignKey("MovieId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MovieId");
 
                     b.Navigation("Movie");
                 });
@@ -506,6 +531,11 @@ namespace MovieTicketBooking.Infrastructure.Migrations
             modelBuilder.Entity("MovieTicketBooking.Domain.Models.Movie", b =>
                 {
                     b.Navigation("ShowTimes");
+                });
+
+            modelBuilder.Entity("MovieTicketBooking.Domain.Models.ShowTime", b =>
+                {
+                    b.Navigation("Seats");
                 });
 #pragma warning restore 612, 618
         }

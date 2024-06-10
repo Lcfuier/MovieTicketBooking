@@ -12,14 +12,14 @@ namespace MovieTicketBooking.Application.Interfaces
 {
     public interface IShowTimeService
     {
-        Task<PaginationResponse<Cinema>> GetAllShowTimeAsync(int page);
+        Task<PaginationResponse<ShowTime>> GetAllShowTimeAsync(int page);
         Task<int> GetShowTimeCountAsync();
 
-        Task<Result<Cinema?>> GetShowTimeByIdAsync(Guid id);
+        Task<Result<ShowTime?>> GetShowTimeByIdAsync(Guid id);
 
-        Task AddShowTimeAsync(Cinema cinema);
-        Task<Result<Cinema>> AddShowTimeAsync(CinemaDTO cinema);
-        Task<Result> UpdateShowTimeAsync(CinemaDTO cinema);
+        Task AddShowTimeAsync(ShowTime showTime);
+        Task<Result<ShowTime>> AddShowTimeAsync(ShowTimeDTO showTimee);
+        Task<Result> UpdateShowTimeAsync(ShowTimeDTO showTime);
 
         Task<Result> RemoveShowTimeAsync(Guid id);
     }

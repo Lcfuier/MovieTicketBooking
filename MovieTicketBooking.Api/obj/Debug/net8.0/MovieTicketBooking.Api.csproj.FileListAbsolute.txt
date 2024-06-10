@@ -153,3 +153,4 @@ D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\bin\Debug\net8.0
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\bin\Debug\net8.0\Serilog.dll
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\bin\Debug\net8.0\MovieTicketBooking.Application.dll
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\bin\Debug\net8.0\MovieTicketBooking.Application.pdb
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\obj\Debug\net8.0\MovieTicketBooking.Api.sourcelink.json

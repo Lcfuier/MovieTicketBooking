@@ -15,3 +15,4 @@ D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\D
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\MovieTicketBooking.Infrastructure.pdb
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\MovieTicketBooking.Infrastructure.genruntimeconfig.cache
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\ref\MovieTicketBooking.Infrastructure.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Infrastructure\obj\Debug\net8.0\MovieTicketBooking.Infrastructure.sourcelink.json

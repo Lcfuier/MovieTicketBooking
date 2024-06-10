@@ -10,3 +10,4 @@ D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Domain\obj\Debug\net
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Domain\obj\Debug\net8.0\refint\MovieTicketBooking.Domain.dll
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Domain\obj\Debug\net8.0\MovieTicketBooking.Domain.pdb
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Domain\obj\Debug\net8.0\ref\MovieTicketBooking.Domain.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Domain\obj\Debug\net8.0\MovieTicketBooking.Domain.sourcelink.json

@@ -5,14 +5,38 @@ using MovieTicketBooking.Api.Extensions;
 using Microsoft.AspNetCore.Identity;
 using MovieTicketBooking.Domain.Models;
 using MovieTicketBooking.Application.Mapper;
+using MovieTicketBooking.Application.Common.JsonConverter;
+using Microsoft.OpenApi.Any;
+using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(opt =>
+    {
+        opt.JsonSerializerOptions.Converters.Add(new DateOnlyJsonConverter());
+        opt.JsonSerializerOptions.Converters.Add(new TimeOnlyJsonConverter());
+        // other converter...
+    });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(opt =>
+{
+    opt.MapType<DateOnly>(() => new OpenApiSchema
+    {
+        Type = "string",
+        Format = "date",
+        Example = new OpenApiString(DateTime.Today.ToString("yyyy-MM-dd"))
+    });
+    opt.MapType<TimeOnly>(() => new OpenApiSchema
+    {
+        Type = "string",
+        Format = "time",
+        Example = new OpenApiString("00:00:00")
+    });
+}
+);;
 builder.Services.AddRouting(options =>
 {
     options.LowercaseUrls = true;

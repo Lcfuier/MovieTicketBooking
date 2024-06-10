@@ -13,3 +13,4 @@ D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\obj\Debu
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\bin\Debug\net8.0\MovieTicketBooking.Domain.dll
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\bin\Debug\net8.0\MovieTicketBooking.Domain.pdb
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\obj\Debug\net8.0\MovieTic.16A12567.Up2Date
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Application\obj\Debug\net8.0\MovieTicketBooking.Application.sourcelink.json

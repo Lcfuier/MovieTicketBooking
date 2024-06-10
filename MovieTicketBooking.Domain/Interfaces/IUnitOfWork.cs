@@ -13,6 +13,7 @@ namespace MovieTicketBooking.Domain.Interfaces
         ICustomerRepository Customer { get; }
         IMovieRepository Movie { get; }
         IShowTimeRepository ShowTime { get; }
+        ISeatRepository Seat { get;  }
 
         Task SaveAsync();
     }

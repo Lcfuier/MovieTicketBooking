@@ -21,6 +21,7 @@ namespace MovieTicketBooking.Infrastructure.UnitOfWork
         public IMovieRepository Movie { get; private set; }
 
         public IShowTimeRepository ShowTime { get; private set; }
+        public ISeatRepository Seat { get; private set; }
         public UnitOfWork(MovieTicketBookingDbcontext context)
         {
             _context = context;
@@ -29,6 +30,7 @@ namespace MovieTicketBooking.Infrastructure.UnitOfWork
             ShowTime=new ShowTimeRepository(_context);
             Booking=new BookingRepository(_context);
             Customer=new CustomerRepository(_context);
+            Seat=new SeatRepository(_context);
         }
         public void Dispose()
         {

@@ -19,7 +19,10 @@ namespace MovieTicketBooking.Application.Mapper
                 .ForMember(dest=>dest.CinemaId,opt=>opt.MapFrom(src=>src.CinemaId))
                 .ForMember(dest => dest.CinemaName, opt => opt.MapFrom(src => src.CinemaName));
             CreateMap<ShowTime, ShowTimeDTO>();
-            CreateMap<ShowTimeDTO, ShowTime>();
+            CreateMap<ShowTimeDTO, ShowTime>()
+                .ForMember(dest => dest.MovieId, opt => opt.MapFrom(src => src.MovieId));
+            CreateMap<Seat, SeatDTO>();
+            CreateMap<SeatDTO, Seat>();
         }
     } 
 }
