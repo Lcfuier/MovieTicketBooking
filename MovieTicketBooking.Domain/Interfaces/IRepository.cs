@@ -14,7 +14,7 @@ namespace MovieTicketBooking.Domain.Interfaces
         Task<int> CountAsync();
 
         Task<T?> GetAsync(Guid id);
-        Task<T?> GetAsync(string id);
+        Task<T?> GetAsync(string id, bool asNoTracking = false);
         Task<T?> GetAsync(QueryOptions<T> options, bool asNoTracking =false );
 
         void Add(T entity);

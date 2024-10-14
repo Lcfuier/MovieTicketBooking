@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace MovieTicketBooking.Application.DTOs
         [Range(1, 50)]
         public int SeatNumber { get; set; }
         public bool IsBooking { get; set; } = false;
-        public Guid ShowTimeId { get; set; }
+        public decimal Price  { get; set; }
+
+        public Guid? ShowTimeId { get; set; }
     }
 }

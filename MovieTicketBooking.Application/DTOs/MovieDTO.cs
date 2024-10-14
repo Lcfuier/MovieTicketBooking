@@ -27,12 +27,12 @@ namespace MovieTicketBooking.Application.DTOs
         [Required]
         public string Duration { get; set; }
         [Required]
-        public DateTime ReleaseDate { get; set; }
+        public DateOnly ReleaseDate { get; set; }
         [Required]
         public string ImageUrl { get; set; }
 
-        public DateTime ModifiedTime { get; set; }
-        public ICollection<ShowTime> ShowTimes { get; set; }
-        public  ICollection<Cinema> Cinemas { get; set; }
+        public DateTime? ModifiedTime { get; set; }
+        public Guid[]? ShowTimeIds { get; set; }
+        public Guid[]? CinemaIds { get; set; }
     }
 }

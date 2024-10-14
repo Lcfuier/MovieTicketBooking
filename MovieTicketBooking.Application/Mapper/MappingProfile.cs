@@ -23,6 +23,14 @@ namespace MovieTicketBooking.Application.Mapper
                 .ForMember(dest => dest.MovieId, opt => opt.MapFrom(src => src.MovieId));
             CreateMap<Seat, SeatDTO>();
             CreateMap<SeatDTO, Seat>();
+            CreateMap<Movie, MovieDTO>();
+            CreateMap<MovieDTO, Movie>();
+
+            CreateMap<BookingDetail, BookingDetailDTO>();
+            CreateMap<BookingDetailDTO, BookingDetail>();
+
+            CreateMap<Booking, BookingDTO>();
+            CreateMap<BookingDTO, Booking>();
         }
     } 
 }

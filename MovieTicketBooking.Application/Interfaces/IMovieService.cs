@@ -1,4 +1,5 @@
 ﻿using FluentResults;
+using MovieTicketBooking.Application.DTOs;
 using MovieTicketBooking.Domain.Models;
 using MovieTicketBooking.Domain.Queries;
 using System;
@@ -11,15 +12,15 @@ namespace MovieTicketBooking.Application.Interfaces
 {
     public interface IMovieService
     {
-        Task<PaginationResponse<Movie>> GetAllMoviesAsync(Guid? cinemaId, int page);
-        Task<IEnumerable<Movie>> GetMoviesByTerm(string term);
+        Task<PaginationResponse<Movie>> GetAllMoviesAsync( int page);
+        Task<PaginationResponse<Movie>> GetMoviesByTerm(string term, int page);
         Task<int> GetMovieCountAsync();
 
-        Task<Movie?> GetMovieByIdAsync(Guid id);
+        Task<Result<Movie?>> GetMovieByIdAsync(Guid id);
 
-        Task AddMovieAsync(Movie movie);
+        Task<Result<Movie?>> AddMovieAsync(MovieDTO movie);
 
-        Task UpdateMovieAsync(Movie movie);
+        Task<Result> UpdateMovieAsync(MovieDTO movie);
 
         Task<Result> RemoveMovieAsync(Guid id);
     }

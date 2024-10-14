@@ -35,16 +35,30 @@ namespace MovieTicketBooking.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<Result<Seat>> AddSeatAsync(SeatDTO seat)
+        public async Task<Result<Seat>> AddSeatAsync(SeatDTO seatDto)
         {
-            throw new NotImplementedException();
+            QueryOptions<Seat> options = new QueryOptions<Seat>
+            {
+                Where = r => r.SeatNumber == seatDto.SeatNumber && r.ShowTimeId==seatDto.ShowTimeId,
+            };
+            Seat? seat = await _data.Seat.GetAsync(options,asNoTracking:true);
+            if (seat != null)
+            {
+                string message = "Seat is already exist.";
+                Log.Warning($"{this.GetType().Name} - {message} ");
+                return Result.Fail<Seat>(new DuplicateError(message));
+            }
+            seat= _mapper.Map<Seat>(seatDto);   
+            _data.Seat.Add(seat);
+            await _data.SaveAsync();
+            return seat;
         }
 
         public async Task<PaginationResponse<Seat>> GetAllSeatsAsync(int page)
         {
             QueryOptions<Seat> options = new QueryOptions<Seat>
             {
-                Includes = "ShowTime",
+                
                 PageNumber = page,
                 PageSize = PagingConstants.DefaultPageSize
             };
@@ -66,18 +80,15 @@ namespace MovieTicketBooking.Application.Services
         {
             QueryOptions<Seat> options = new QueryOptions<Seat>
             {
-                Includes = "ShowTime",
                 Where = mi => mi.SeatId.Equals(id)
             };
-            Seat? seat = await _data.Seat.GetAsync(options);
+            Seat? seat = await _data.Seat.GetAsync(options, asNoTracking: true);
             if (seat == null)
             {
                 string message = "Seat not found.";
                 Log.Warning($"{this.GetType().Name} - {message} ");
                 return Result.Fail<Seat?>(new NotFoundError(message));
             }
-
-
             return seat;
         }
 
@@ -85,7 +96,6 @@ namespace MovieTicketBooking.Application.Services
         {
             QueryOptions<Seat> options = new QueryOptions<Seat>
             {
-                Includes = "ShowTime",
                 Where = mi => mi.ShowTimeId.Equals(id)
             };
             Seat? seat = await _data.Seat.GetAsync(options);
@@ -100,9 +110,19 @@ namespace MovieTicketBooking.Application.Services
             return seat;
         }
 
-        public Task<Result> RemoveSeatAsync(Guid id)
+        public async  Task<Result> RemoveSeatAsync(Guid id)
         {
-            throw new NotImplementedException();
+            Seat? seat = await _data.Seat.GetAsync(id);
+            if (seat == null)
+            {
+                string message = "Seat not found.";
+                Log.Warning($"{this.GetType().Name} - {message} ");
+                return Result.Fail(new NotFoundError(message));
+            }
+            _data.Seat.Remove(seat);
+            await _data.SaveAsync();
+
+            return Result.Ok();
         }
 
         public Task<Result<List<Seat>>> UpdateRangeSeatsAsync(List<SeatDTO> seats)
@@ -110,9 +130,25 @@ namespace MovieTicketBooking.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<Result> UpdateSeatAsync(SeatDTO seat)
+        public async Task<Result> UpdateSeatAsync(SeatDTO seatDto)
         {
-            throw new NotImplementedException();
+            QueryOptions<Seat> options = new QueryOptions<Seat>
+            {
+                Where = r => r.SeatId == seatDto.SeatId,
+                
+            };
+            Seat? seat = await _data.Seat.GetAsync(options, asNoTracking: true);
+            if (seat == null)
+            {
+                string message = "Seat not found.";
+                Log.Warning($"{this.GetType().Name} - {message} ");
+                return Result.Fail(new NotFoundError(message));
+            }
+            seat = _mapper.Map<Seat>(seatDto);
+            
+            _data.Seat.Update(seat);
+            await _data.SaveAsync();
+            return Result.Ok();
         }
     }
 }

@@ -13,6 +13,7 @@ namespace MovieTicketBooking.Infrastructure.UnitOfWork
     {
         private readonly MovieTicketBookingDbcontext _context;
         public IBookingRepository Booking { get; private set; }
+        public IBookingDetailRepository BookingDetail { get; private set; }
 
         public ICinemaRepository Cinema { get; private set; }
 
@@ -31,6 +32,7 @@ namespace MovieTicketBooking.Infrastructure.UnitOfWork
             Booking=new BookingRepository(_context);
             Customer=new CustomerRepository(_context);
             Seat=new SeatRepository(_context);
+            BookingDetail=new BookingDetailRepository(_context);
         }
         public void Dispose()
         {

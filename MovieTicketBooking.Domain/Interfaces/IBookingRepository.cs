@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MovieTicketBooking.Domain.Interfaces
 {
-    public interface IBookingRepository
+    public interface IBookingRepository : IRepository<Booking>
     {
         void Update(Booking booking);
     }

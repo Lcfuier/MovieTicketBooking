@@ -154,3 +154,10 @@ D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\bin\Debug\net8.0
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\bin\Debug\net8.0\MovieTicketBooking.Application.dll
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\bin\Debug\net8.0\MovieTicketBooking.Application.pdb
 D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\obj\Debug\net8.0\MovieTicketBooking.Api.sourcelink.json
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\bin\Debug\net8.0\MailKit.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\bin\Debug\net8.0\MimeKit.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\bin\Debug\net8.0\NETCore.MailKit.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\bin\Debug\net8.0\System.Formats.Asn1.dll
+D:\MovieTicketBooking\MovieTicketBooking\MovieTicketBooking.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Versioning.dll

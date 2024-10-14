@@ -61,7 +61,7 @@ namespace MovieTicketBooking.Application.Services
         {
             QueryOptions<ShowTime> options = new QueryOptions<ShowTime>
             {
-                Includes = "Movie",
+                Includes = "Movie,Seats",
                 PageNumber = page,
                 PageSize = PagingConstants.DefaultPageSize
             };

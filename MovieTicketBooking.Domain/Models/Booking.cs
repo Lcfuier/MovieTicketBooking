@@ -23,6 +23,11 @@ namespace MovieTicketBooking.Domain.Models
         [StringLength(20)]
         [Unicode(false)]
         public string? PaymentStatus { get; set; }
+        [Unicode(false)]
+        public string? BookingStatus { get; set; }
+        [StringLength(256)]
+        [Unicode(false)]
+        public string? TransactionId { get; set; }
         [Display(Name = "Email address")]
         [Required(ErrorMessage = "The email address is required")]
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
@@ -31,7 +36,7 @@ namespace MovieTicketBooking.Domain.Models
         public string CustomerId { get; set; }
         [ForeignKey(nameof(CustomerId))]
         public Customer Customer { get; set; }
+        public virtual ICollection<BookingDetail>? BookingDetails { get; set; } = new List<BookingDetail>();
 
-        public virtual ICollection<Cinema> Cinemas { get; set; } = new List<Cinema>();
     }
 }

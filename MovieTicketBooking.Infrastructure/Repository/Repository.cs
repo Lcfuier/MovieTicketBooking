@@ -33,7 +33,7 @@ namespace MovieTicketBooking.Infrastructure.Repository
 
         public virtual async Task<T?> GetAsync(Guid id) =>
             await _dbset.FindAsync(id);
-        public virtual async Task<T?> GetAsync(string id) =>
+        public virtual async Task<T?> GetAsync(string id, bool asNoTracking = false) =>
             await _dbset.FindAsync(id);
         public virtual async Task<T?> GetAsync(QueryOptions<T> options, bool asNoTracking = false) =>
             await BuildQuery(options, asNoTracking).FirstOrDefaultAsync();

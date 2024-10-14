@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MovieTicketBooking.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +19,7 @@ namespace MovieTicketBooking.Infrastructure.Data
         public DbSet<Movie> Movie { get; set; }
         public DbSet<ShowTime> ShowTime{ get; set; }
         public DbSet<Customer> Customer { get; set; }
+        public DbSet<BookingDetail> BookingDetail { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -39,6 +42,15 @@ namespace MovieTicketBooking.Infrastructure.Data
                             j.HasIndex(new[] { "CinemaId" }, "CINEMAMOVIE_FK");
                         });
             });
+            SeedRoles(modelBuilder);
         }
+        private void SeedRoles(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<IdentityRole>().HasData(
+               new IdentityRole() { Name = "Admin", ConcurrencyStamp = "1", NormalizedName = "Admin" },
+               new IdentityRole() { Name = "User", ConcurrencyStamp = "2", NormalizedName = "User" }
+               );
+        }
+
         }
 }
